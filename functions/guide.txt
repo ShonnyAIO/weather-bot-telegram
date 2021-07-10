@@ -1,0 +1,11 @@
+1) Create your firebase account
+2) Create your firebase project with plan Baze (You need to pay)
+3) npm i firebase-tools -g
+4) firebase init functions: Don't set up a default project, JavaScript, Yes, Yes
+5) firebase user --add: Selection your project, #tag
+6) firebase serve
+7) firebase deply --only functions (only plan Baze)
+8) Create TelegamBot: BotFather
+9) Using Telegraf frameworks
+10) firebase functions:config:set service.apixu_key="fe12ba9ff66f2b1019344e61c4ce64c8" service.telegram_key="1756315114:AAGBhslvhHoS7oFLZMgfbMcO0DgbHdfIxNs"
+11) firebase functions:config:get > env.json
