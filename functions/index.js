@@ -1,5 +1,6 @@
 const functions = require("firebase-functions");
-const { Telegraf } = require('telegraf');
+// const { Telegraf } = require('telegraf');
+const { Composer } = require('micro-bot')
 const express = require("express");
 const app = express();
 
@@ -8,7 +9,7 @@ app.use((req, res, next) => {
     next();
 });
 
-let config = require('../env.json');
+let config = require('./env.json');
 const axios = require('axios');
 
 if(Object.keys(functions.config()).length){
@@ -20,7 +21,7 @@ const params = {
     query: ''
 }
 
-const bot = new Telegraf(config.service.telegram_key);
+const bot = new Composer;
 
 bot.start( (ctx) => { ctx.reply('Bienvenidos :D');});
 
@@ -39,7 +40,8 @@ bot.on('text', (ctx) => {
 });
 
 
-bot.launch();
+//bot.launch();
+module.exports = bot;
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 
